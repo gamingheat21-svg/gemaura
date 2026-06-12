@@ -2,7 +2,8 @@ const cache = require('../utils/cache');
 const astrologyApi = require('./astrologyApiService');
 
 const getDailyHoroscope = async (userId, zodiacSign, dob) => {
-  const cacheKey = `horoscope_${userId}_${dob}`;
+  const today = new Date().toISOString().split('T')[0];
+  const cacheKey = `horoscope_${zodiacSign}_${today}`;
   
   // Check cache first
   const cachedData = cache.get(cacheKey);
