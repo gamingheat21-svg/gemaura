@@ -1,0 +1,243 @@
+.catalog-page {
+  padding: 3rem 1.5rem;
+}
+
+.catalog-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.catalog-header h2 {
+  font-size: 2.5rem;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.catalog-header p {
+  color: var(--color-muted-text);
+  font-size: 1.125rem;
+}
+
+.catalog-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  gap: 1rem;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 1;
+  max-width: 500px;
+  position: relative;
+}
+
+.search-icon {
+  position: absolute;
+  left: 10px;
+  color: var(--color-muted-text);
+}
+
+.search-bar .input-field {
+  padding-left: 2.5rem;
+  margin-top: 0;
+}
+
+.filter-dropdown {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 200px;
+}
+
+.filter-icon {
+  color: var(--color-muted-text);
+}
+
+.filter-dropdown .input-field {
+  margin-top: 0;
+}
+
+.gemstone-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.gem-card {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  overflow: hidden;
+}
+
+.gem-card-img {
+  height: 200px;
+  background: linear-gradient(135deg, rgba(108, 99, 255, 0.1), rgba(212, 175, 55, 0.1));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gem-initial {
+  font-size: 4rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  opacity: 0.7;
+}
+
+.gem-card-content {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.gem-card-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--color-text);
+}
+
+.gem-tags {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.tag {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  background-color: var(--color-background);
+  border: 1px solid var(--color-border);
+  font-weight: 600;
+}
+
+.zodiac-tag {
+  color: var(--color-accent);
+}
+
+.color-tag {
+  border-left-width: 4px;
+}
+
+.gem-benefits {
+  font-size: 0.875rem;
+  color: var(--color-muted-text);
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.page-info {
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.btn-icon {
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.catalog-content-layout {
+  display: grid;
+  grid-template-columns: 2.5fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.catalog-main {
+  width: 100%;
+}
+
+.catalog-sidebar {
+  position: sticky;
+  top: 2rem;
+}
+
+.astrology-sidebar-card {
+  background: linear-gradient(to bottom right, var(--color-background), rgba(108, 99, 255, 0.05));
+  border: 1px solid var(--color-border);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.astrology-sidebar-card h3 {
+  font-size: 1.5rem;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.astro-detail {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.astro-detail:last-of-type {
+  border-bottom: none;
+}
+
+.astro-label {
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.astro-value {
+  color: var(--color-muted-text);
+  text-align: right;
+  max-width: 60%;
+}
+
+.astro-traits h4 {
+  font-size: 1.1rem;
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+}
+
+.astro-traits p {
+  color: var(--color-muted-text);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 992px) {
+  .catalog-content-layout {
+    grid-template-columns: 1fr;
+  }
+  
+  .catalog-sidebar {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .catalog-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .search-bar {
+    max-width: 100%;
+  }
+}

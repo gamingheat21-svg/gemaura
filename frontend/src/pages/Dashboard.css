@@ -1,0 +1,146 @@
+.dashboard-page {
+  padding: 3rem 1.5rem;
+}
+
+.dashboard-header {
+  margin-bottom: 2rem;
+}
+
+.dashboard-header h2 {
+  font-size: 2rem;
+  color: var(--color-primary);
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 2rem;
+}
+
+.profile-card {
+  text-align: center;
+  align-self: start;
+}
+
+.profile-avatar {
+  width: 100px;
+  height: 100px;
+  background-color: rgba(212, 175, 55, 0.1);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 1.5rem;
+}
+
+.profile-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.user-email {
+  color: var(--color-muted-text);
+  margin-bottom: 1.5rem;
+}
+
+.user-details {
+  border-top: 1px solid var(--color-border);
+  padding-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: var(--color-text);
+}
+
+.detail-icon {
+  color: var(--color-primary);
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.section-header h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.25rem;
+  color: var(--color-text);
+}
+
+.empty-state {
+  text-align: center;
+  padding: 3rem;
+  color: var(--color-muted-text);
+}
+
+.history-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.history-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.history-date {
+  font-size: 0.875rem;
+  color: var(--color-muted-text);
+  min-width: 100px;
+  padding-top: 0.5rem;
+}
+
+.history-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--color-background);
+  padding: 1rem;
+  border-radius: var(--border-radius-md);
+  border: 1px solid var(--color-border);
+  flex: 1;
+}
+
+.history-gem-initial {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(108, 99, 255, 0.1);
+  color: var(--color-primary);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.history-content h4 {
+  margin-bottom: 0.25rem;
+  color: var(--color-text);
+}
+
+.history-content p {
+  font-size: 0.875rem;
+  color: var(--color-muted-text);
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+}
