@@ -10,7 +10,7 @@ import { GuidanceTab, CareerTab, RelationshipTab } from './ResultTabs/AdviceTabs
 import { HoroscopeTab, CompatibilityTab } from './ResultTabs/DynamicTabs';
 import './Result.css';
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+const API_URL = import.meta.env.VITE_API_URL || 'https://gemaura-pidc.onrender.com/api';
 
 const Result = () => {
   const location = useLocation();

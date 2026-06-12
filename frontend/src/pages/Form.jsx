@@ -4,7 +4,7 @@ import axios from 'axios';
 import { getZodiacSign } from '../utils/zodiac';
 import './Form.css';
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+const API_URL = import.meta.env.VITE_API_URL || 'https://gemaura-pidc.onrender.com/api';
 
 const Form = () => {
   const [formData, setFormData] = useState({

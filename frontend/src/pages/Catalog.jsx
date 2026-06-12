@@ -4,7 +4,7 @@ import { Search, Filter, ChevronLeft, ChevronRight } from 'lucide-react';
 import { AuthContext } from '../context/AuthContext';
 import './Catalog.css';
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+const API_URL = import.meta.env.VITE_API_URL || 'https://gemaura-pidc.onrender.com/api';
 
 const Catalog = () => {
   const [gemstones, setGemstones] = useState([]);

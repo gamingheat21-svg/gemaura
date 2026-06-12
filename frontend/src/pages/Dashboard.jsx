@@ -5,7 +5,7 @@ import { User, Clock, Bookmark, Calendar } from 'lucide-react';
 import { AuthContext } from '../context/AuthContext';
 import './Dashboard.css';
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+const API_URL = import.meta.env.VITE_API_URL || 'https://gemaura-pidc.onrender.com/api';
 
 const Dashboard = () => {
   const { user, token } = useContext(AuthContext);
