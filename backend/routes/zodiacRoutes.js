@@ -7,7 +7,7 @@ const router = express.Router();
 // @desc    Get complete static profile for a zodiac sign
 router.get('/:sign', async (req, res) => {
   try {
-    const result = await db.query('SELECT * FROM zodiac_profiles WHERE sign = $1', [req.params.sign]);
+    const result = await db.query('SELECT * FROM zodiac_profiles WHERE LOWER(sign) = LOWER(TRIM($1))', [req.params.sign]);
     if (result.length > 0) {
       res.json(result[0]);
     } else {

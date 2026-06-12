@@ -28,6 +28,22 @@ app.get('/', (req, res) => {
   res.send('GemAura API is running...');
 });
 
+// Temporary endpoint to initialize the database
+app.get('/api/init-db', async (req, res) => {
+  const fs = require('fs');
+  const path = require('path');
+  const db = require('./db/index');
+  try {
+    const schemaPath = path.join(__dirname, 'db', 'schema.sql');
+    const schema = fs.readFileSync(schemaPath, 'utf8');
+    await db.query(schema);
+    res.send('Database initialized successfully! You can now use the app.');
+  } catch (error) {
+    console.error('Error initializing database:', error);
+    res.status(500).send('Error initializing database: ' + error.message);
+  }
+});
+
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });

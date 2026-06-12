@@ -14,7 +14,7 @@ router.get('/', async (req, res) => {
   try {
     // Try both orders (sign1-sign2 or sign2-sign1) since compatibility is usually mutual in this simple table
     const result = await db.query(
-      'SELECT * FROM compatibility WHERE (sign1 = $1 AND sign2 = $2) OR (sign1 = $3 AND sign2 = $4)', 
+      'SELECT * FROM compatibility WHERE (LOWER(sign1) = LOWER(TRIM($1)) AND LOWER(sign2) = LOWER(TRIM($2))) OR (LOWER(sign1) = LOWER(TRIM($3)) AND LOWER(sign2) = LOWER(TRIM($4)))', 
       [sign1, sign2, sign2, sign1]
     );
     if (result.length > 0) {
